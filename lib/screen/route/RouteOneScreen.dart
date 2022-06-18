@@ -18,6 +18,22 @@ class RouteOneScreen extends StatelessWidget {
         ),
         ElevatedButton(
           onPressed: () {
+            print(Navigator.of(context).canPop());
+          },
+          child: Text(
+            'Can Pop',
+          ),
+        ),
+        ElevatedButton(
+          onPressed: () {
+            Navigator.of(context).maybePop();
+          },
+          child: Text(
+            'MaybePop',
+          ),
+        ),
+        ElevatedButton(
+          onPressed: () {
             Navigator.of(context).pop(456);
           },
           child: Text(
@@ -28,11 +44,10 @@ class RouteOneScreen extends StatelessWidget {
           onPressed: () {
             Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (_) => RouteTwoScreen(),
-                settings: RouteSettings(
-                  arguments: 789,
-                )
-              ),
+                  builder: (_) => RouteTwoScreen(),
+                  settings: RouteSettings(
+                    arguments: 789,
+                  )),
             );
           },
           child: Text(

@@ -7,4 +7,4 @@
  - [x] Argument 전달하기
  - [x] Named Route
  - [x] 알고있으면 좋은 Push Method
- - [ ] 알고있으면 좋은 Pop Method
+ - [x] 알고있으면 좋은 Pop Method
