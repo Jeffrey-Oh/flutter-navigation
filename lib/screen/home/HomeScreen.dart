@@ -13,14 +13,16 @@ class HomeScreen extends StatelessWidget {
       title: 'Home Screen',
       children: [
         for (int i=1; i<=3; i++) ElevatedButton(
-          onPressed: () {
-            Navigator.of(context).push(
+          onPressed: () async {
+            final result = await Navigator.of(context).push(
               MaterialPageRoute(
                 builder: (BuildContext context) {
                   Widget routeWidget;
                   switch (i) {
                     case 1:
-                      routeWidget = RouteOneScreen();
+                      routeWidget = RouteOneScreen(
+                        number: 123,
+                      );
                       break;
                     case 2:
                       routeWidget = RouteTwoScreen();
@@ -36,6 +38,8 @@ class HomeScreen extends StatelessWidget {
                 },
               ),
             );
+
+            print(result);
           },
           child: Text(
             'Route ${i}',
