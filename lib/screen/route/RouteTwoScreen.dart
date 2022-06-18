@@ -23,6 +23,14 @@ class RouteTwoScreen extends StatelessWidget {
             'Pop',
           ),
         ),
+        ElevatedButton(
+          onPressed: () {
+            Navigator.of(context).pushNamed('/three', arguments: 999);
+          },
+          child: Text(
+            'Push Named',
+          ),
+        )
       ],
     );
   }

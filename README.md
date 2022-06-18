@@ -5,6 +5,6 @@
 
  - [x] 공부할 환경 세팅하기
  - [x] Argument 전달하기
- - [ ] Named Route
+ - [x] Named Route
  - [ ] 알고있으면 좋은 Push Method
  - [ ] 알고있으면 좋은 Pop Method
